@@ -9,12 +9,5 @@ build
 dist
 *.egg
 *.egg-info
-venv
 docs/_build
 /.tox
-/lib
-/bin
-/include
-/.Python
-/.cache
-
