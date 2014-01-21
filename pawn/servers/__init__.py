@@ -126,21 +126,21 @@ class Server(object, Pluggable):
         return handler
 
     def recv_forever_ever(self):
-        """Helper function for starting the link between Brubeck and the
-        message processing provided by `msg_conn`.
+        """Helper function for starting the link between pawn and the message
+        processing provided by `msg_conn`.
         """
         mc = self.msg_conn
         mc.recv_forever_ever(self)
 
     def run(self):
-        """This method turns on the message handling system and puts Brubeck
-        in a never ending loop waiting for messages.
+        """This method turns on the message handling system and puts pawn in a
+        never ending loop waiting for messages.
 
-        The loop is actually the eventlet scheduler. A goal of Brubeck is to
-        help users avoid thinking about complex things like an event loop while
+        The loop is actually the eventlet scheduler. A goal of pawn is to help
+        users avoid thinking about complex things like an event loop while
         still getting the goodness of asynchronous and nonblocking I/O.
         """
-        greeting = 'Brubeck v%s online ]-----------------------------------'
+        greeting = 'pawn v%s online ]-----------------------------------'
         print greeting % version
 
         self.recv_forever_ever()

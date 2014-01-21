@@ -16,12 +16,6 @@ import Cookie
 ###
 
 class Connection(object):
-    """This class is an abstraction for how Brubeck sends and receives
-    messages. The idea is that Brubeck waits to receive messages for some work
-    and then it responds. Therefore each connection should essentially be a
-    mechanism for reading a message and a mechanism for responding, if a
-    response is necessary.
-    """
 
     def __init__(self, incoming=None, outgoing=None):
         """The base `__init__()` function configures a unique ID and assigns
@@ -54,7 +48,7 @@ class Connection(object):
             fun_forever()
         except KeyboardInterrupt, ki:
             # Put a newline after ^C
-            print '\nBrubeck going down...'
+            print '\nPawn going down...'
 
     def send(self, uuid, conn_id, msg):
         """Function for sending a single message.

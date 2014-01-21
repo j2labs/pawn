@@ -40,10 +40,6 @@ def load_zmq_ctx():
 
 
 class Mongrel2Connection(Connection):
-    """This class is an abstraction for how Brubeck sends and receives
-    messages. This abstraction makes it possible for something other than
-    Mongrel2 to be used easily.
-    """
     MAX_IDENTS = 100
 
     def __init__(self, pull_addr, pub_addr):
@@ -94,7 +90,7 @@ class Mongrel2Connection(Connection):
         return zmq_msg
 
     def recv_forever_ever(self, application):
-        """Defines a function that will run the primary connection Brubeck uses
+        """Defines a function that will run the primary connection pawn uses
         for incoming jobs. This function should then call super which runs the
         function in a try-except that can be ctrl-c'd.
         """

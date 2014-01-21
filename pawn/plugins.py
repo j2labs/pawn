@@ -1,7 +1,6 @@
 """Basically anything can use plugins because plugins are just a mechanism for
-attaching python modules to the Brubeck environment.  This is how opinions can
-remain outside of Brubeck while still being a core piece of someone's
-experience.
+attaching python modules to the pawn environment.  This is how opinions can
+remain outside of pawn while still being a core piece of someone's experience.
 
 This is good for creativity.
 

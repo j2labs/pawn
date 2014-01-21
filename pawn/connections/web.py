@@ -28,10 +28,6 @@ class WSGIConnection(Connection):
         return [to_bytes(result['body'])]
 
     def recv_forever_ever(self, application):
-        """Defines a function that will run the primary connection Brubeck uses
-        for incoming jobs. This function should then call super which runs the
-        function in a try-except that can be ctrl-c'd.
-        """
         def fun_forever():
             print "Serving on port %s..." % (self.port)
 
